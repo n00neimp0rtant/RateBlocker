@@ -19,6 +19,8 @@
 			if([[string lowercaseString] isEqualToString:@"rate"])
 				canShow = NO;
 		}
+		if(canShow)
+			%orig;
 	}
 }
 %end

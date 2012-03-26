@@ -1,9 +1,9 @@
 Package: com.n00neimp0rtant.rateblocker
 Name: RateBlocker
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 0.0.2
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: block "rate me" popups
 Maintainer: n00neimp0rtant
 Author: n00neimp0rtant
 Section: Tweaks

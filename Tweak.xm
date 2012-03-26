@@ -2,19 +2,24 @@
 -(void)show
 {
 	BOOL canShow = YES;
-	NSRange textRange;
-	textRange = [[[self title] lowercaseString] rangeOfString:[NSString stringWithFormat:@"rate"]];
-	if(textRange.location != NSNotFound)
-	{
-		canShow = NO;
-	}
-	textRange = [[[self message] lowercaseString] rangeOfString:[NSString stringWithFormat:@"rate"]];
-	if(textRange.location != NSNotFound)
-	{
-		canShow = NO;
-	}
-	if(canShow)
+	
+	if([self numberOfButtons] == 1)
 		%orig;
+	else
+	{
+		NSArray* array = [[self title] componentsSeparatedByString:@" "];
+		for(NSString* string in array)
+		{
+			if([[string lowercaseString] isEqualToString:@"rate"])
+				canShow = NO;
+		}
+		array = [[self message] componentsSeparatedByString:@" "];
+		for(NSString* string in array)
+		{
+			if([[string lowercaseString] isEqualToString:@"rate"])
+				canShow = NO;
+		}
+	}
 }
 %end
 

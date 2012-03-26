@@ -1,0 +1,1 @@
+prevents any UIAlertViews containing the word "rate" from displaying. only hooks App Store apps, so won't affect native/Cydia applications.

@@ -10,13 +10,13 @@
 		NSArray* array = [[self title] componentsSeparatedByString:@" "];
 		for(NSString* string in array)
 		{
-			if([[string lowercaseString] isEqualToString:@"rate"])
+			if([[string lowercaseString] isEqualToString:@"*rate"])
 				canShow = NO;
 		}
 		array = [[self message] componentsSeparatedByString:@" "];
 		for(NSString* string in array)
 		{
-			if([[string lowercaseString] isEqualToString:@"rate"])
+			if([[string lowercaseString] isEqualToString:@"*rate"])
 				canShow = NO;
 		}
 		if(canShow)
